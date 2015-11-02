@@ -5,6 +5,7 @@
 - long double 小数
 - char　文字
 - char* ストリング（文字列）
+- string ストリング
 - unsigned char　符号なし文字列
 - size_t　メモリのアドレス
 - sizeof 配列の大きさ（型ではないかも）
