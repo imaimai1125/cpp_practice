@@ -7,6 +7,7 @@ class ArrayStream
 	:public Stream{
 public:
 	ArrayStream(const double* array); //コンストラクタ
+	~ArrayStream()//デストラクタ
 	bool Set();
 
 private:
