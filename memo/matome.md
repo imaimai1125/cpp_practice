@@ -86,3 +86,10 @@ try{
 }
 ```
 - exception
+
+
+### マクロ
+- #define 関数などを定義
+- #undef マクロの解除
+- #assert(condition) 偽なら終了する
+- #NDEBUG assertマクロを消す	
