@@ -14,6 +14,7 @@
 - int a[]　配列
 - class クラス
 - template <typename TYPE> 引数テンプレート
+- typedef 同義語を作る
 
 ### 型の前に付ける条件みたいな型
 - &　参照
@@ -84,4 +85,4 @@ try{
 	エラー処理
 }
 ```
--exception
+- exception
