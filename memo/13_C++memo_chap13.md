@@ -78,6 +78,7 @@ void ShowType(const ostream& ostr){
 - クラスの名前だけを宣言することもできる
 - フレンド指定は**一方通行**
 
+## 11/8
 ### 13.10 不完全型
 - ```class クラス名;```とすれば不完全型を宣言できる
 - クラスの具体的な内容を知る必要がない場合は不完全型で十分
@@ -161,7 +162,22 @@ template<typename TYPE>
 	- CHAR_BITなどという1ばいとのビット数を記述するマクロもある
 - cfloatヘッダでは、浮動小数点型の最小値,最大値のマクロがある
 	- float : FLT_ , double : DBL_ , long double : LDBL
+- pairは、2つの方の異なる値をまとめて管理するクラステンプレート。
+	- utilityヘッダをインクルードする必要あり
+```
+namespace std{
+	template<typename T1, typename T2>
+	struct pair{
+		typedef T1 first_type;
+		typedef T2 second_type;
+		T1 first;
+		T2 second;
+	}
+}
+```
 
+## 11/9
+### 13.14 関数ポインタ
 
 ### memo 
 - インターフェースクラスっていみあるの？
