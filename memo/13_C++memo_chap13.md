@@ -200,14 +200,46 @@ const FpOp FP_OPERATOR[] = {
 ```
 
 ### 13.15 メンバ関数pointer
-- 静的メンバ関数は普通の関数ポインタに代入できる 
+- 静的メンバ関数は普通の関数ポインタに代入できる : 比較的簡単
+
+```
+//四則演算を行う関数
+static int Add(int a, int b){return a+b;}
+static int Sub(int a, int b){return a-b;}
+static int Mul(int a, int b){return a*b;}
+static int Div(int a, int b){return a/b;}
+
+//四則演算を行う関数をまとめた配列ポインタ
+typedef int(*FpOp2)(int a, int b);
+static const FpOp2 FP_OPERATOR[];
+const Calculator::FpOp2 Calculator::FP_OPERATOR[] = {
+	Calculator::Add, Calculator::Sub,
+	Calculator::Mul, Calculator::Div
+};
+
+```
+
 - メンバ関数ポインタの型名では * の前に　クラス名::　がつく
 - メンバ関数ポインタを使うときには```.*``` や ```->*```演算子を使う
 - this -> *　は省略不可
 
 
+## 11/12
+### 13.16　メンバ関数ポインタ
+- メンバ関数ポインタは仮想感関数の呼び出しも適切に処理してくれる
+	- メモリアドレスじゃなくて仮想関数の種類ごとに割り振られた番号が保存されているといった具合
+- メンバ関数ポインタのサイズは普通のポインタのサイズと同じとは限らない
 
-
+### 13.17 メンバ変数ポインタ
+- メンバ変数ポインタ
+	- メンバ変数ポインタはメンバ関数ポインタと同様```.*```や```->*```でオブジェクトを指定して使う	
+	- ```参照先の型 クラス名::*変数名;```と宣言する
+	- Pointとという構造体の中でメンバ変数yはどの位置にあるのかを表している
+	- ``` int Point::*mp = &Point::y;```
+- 変数ポインタ
+	- ```int *p = &pt.y;```
+	- これはメモリの中で，ある特定のオブジェクトptのメンバ変数yがどの位置にあるのかを表している．
+	- オブジェクトの実態一つにつき一つの宣言が必要．（pt1とpt2はアドレスが違う）
 
 
 ### memo 
