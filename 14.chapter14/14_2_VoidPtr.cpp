@@ -7,10 +7,10 @@ int main(){
 	double d = 3;
 	void * p;
 
-	//ポインタ使うならvoidのままでは使えないのでキャストする
+	// ポインタ使うならvoidのままでは使えないのでキャストする
 	p = &c;
 	cout << *static_cast<char*>(p) << " ";
-
+	
 	p = &i;
 	cout << *static_cast<int*>(p) << " ";
 
