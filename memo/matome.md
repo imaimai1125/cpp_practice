@@ -15,6 +15,7 @@
 - class クラス
 - template <typename TYPE> 引数テンプレート
 - typedef 同義語を作る
+- union メモリを共有する構造体
 
 ### 型の前に付ける条件みたいな型
 - &　参照
@@ -32,6 +33,11 @@
 - virtual function() = **0** 純粋抽象関数
 - friend メンバ外でもプライベート識別子にアクセスできるようにしている
 - explicit 暗黙のキャストをー
+- volatile コンパイラの最適化を阻害
+- mutable
+
+- (auto)
+- (register)
 
 ### 条件分岐
 ```
